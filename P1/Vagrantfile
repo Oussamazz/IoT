@@ -1,0 +1,27 @@
+Vagrant.configure(2) do |config|
+  config.vm.define "oelazzouS" do |control|
+    control.vm.box = "ubuntu/bionic64"  #  Ubuntu bionic64
+    control.vm.network "private_network", type: "static", ip: "192.168.56.110"  # static ip add
+    control.vm.hostname = "oelazzouS"
+    control.vm.provider "virtualbox" do |v|
+      v.memory = 512  # Adjust memory as needed (512 MB or 1024 MB)
+      v.cpus = 1
+    end
+    control.vm.provision "file", source: "~/.ssh/id_rsa.pub", destination: "/tmp/id_rsa.pub"# copying pub key
+    control.vm.provision "file", source: "~/.ssh/id_rsa", destination: "/tmp/id_rsa" # copying private key
+    control.vm.provision "shell", privileged: true, path: "scriptS.sh" # installing k3s in Server machine
+  end
+
+  config.vm.define "oelazzouSW" do |control|
+    control.vm.box = "ubuntu/bionic64"  # Ubuntu bionic64
+    control.vm.network "private_network", type: "static", ip: "192.168.56.111" # static ip add
+    control.vm.hostname = "oelazzouSW"
+    control.vm.provider "virtualbox" do |v|
+      v.memory = 512  # Adjust memory as needed (512 MB or 1024 MB)
+      v.cpus = 1
+    end
+    control.vm.provision "file", source: "~/.ssh/id_rsa.pub", destination: "/tmp/id_rsa.pub" # copying pub key  
+    control.vm.provision "file", source: "~/.ssh/id_rsa", destination: "/tmp/id_rsa"# copying private key
+    control.vm.provision "shell", privileged: true, path: "scriptSw.sh" # installing k3s in Worker machine
+  end
+end
