@@ -17,15 +17,15 @@ Create a Vagrantfile to define the configuration for the two virtual machines. T
 
 Vagrant.configure(2) do |config|
   # Configuration for Server machine
-  config.vm.define "wilS" do |control|
-    control.vm.hostname = "wilS"
+  config.vm.define "oelazzouS" do |control|
+    control.vm.hostname = "oelazzouS"
     control.vm.network "private_network", type: "dhcp"
     # Additional configurations for Server machine...
   end
 
   # Configuration for ServerWorker machine
-  config.vm.define "wilSW" do |control|
-    control.vm.hostname = "wilSW"
+  config.vm.define "oelazzouSW" do |control|
+    control.vm.hostname = "oelazzouSW"
     control.vm.network "private_network", type: "dhcp"
     # Additional configurations for ServerWorker machine...
   end
@@ -37,8 +37,8 @@ Adjust the configuration based on your chosen Linux distribution.
 ### 2. Install K3s
 In this step, you'll install K3s on both virtual machines. Follow these guidelines:
 
-- **Server Machine (wilS):** Install K3s in controller mode.
-- **ServerWorker Machine (wilSW):** Install K3s in agent mode.
+- **Server Machine (oelazzouS):** Install K3s in controller mode.
+- **ServerWorker Machine (oelazzouSW):** Install K3s in agent mode.
 
 Use a provisioning script within the Vagrantfile to automate the installation process.
 
@@ -46,10 +46,10 @@ Use a provisioning script within the Vagrantfile to automate the installation pr
 Ensure that the virtual machines are correctly configured with K3s installed. SSH into each machine and run the following commands:
 
 ```bash
-# On Server machine (wilS)
+# On Server machine (oelazzouS)
 sudo k3s kubectl get nodes
 
-# On ServerWorker machine (wilSW)
+# On ServerWorker machine (oelazzouSW)
 sudo k3s kubectl get nodes
 ```
 
@@ -62,20 +62,20 @@ Verify that you can SSH into both machines without a password prompt.
 
 ```bash
 # SSH into Server machine
-ssh wilS
+ssh oelazzouS
 
 # SSH into ServerWorker machine
-ssh wilSW
+ssh oelazzouSW
 ```
 
 ### K3s Cluster
 Test the K3s cluster setup by running basic Kubernetes commands.
 
 ```bash
-# On Server machine (wilS)
+# On Server machine (oelazzouS)
 sudo k3s kubectl get pods --all-namespaces
 
-# On ServerWorker machine (wilSW)
+# On ServerWorker machine (oelazzouSW)
 sudo k3s kubectl get pods --all-namespaces
 ```
 

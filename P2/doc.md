@@ -13,10 +13,10 @@ This section involves deploying three simple web applications on the K3s cluster
 Ensure that the K3s cluster set up in Part 1 is running and accessible. Verify the status of the nodes and pods on both machines.
 
 ```bash
-# On Server machine (wilS)
+# On Server machine (oelazzouS)
 sudo k3s kubectl get nodes
 
-# On ServerWorker machine (wilSW)
+# On ServerWorker machine (oelazzouSW)
 sudo k3s kubectl get nodes
 ```
 
@@ -65,7 +65,7 @@ Repeat this process for app2 and app3, adjusting the names, images, and ports ac
 Apply the deployment YAML files to deploy the applications on the K3s cluster.
 
 ```bash
-# On Server machine (wilS)
+# On Server machine (oelazzouS)
 sudo k3s kubectl apply -f app1-deployment.yaml
 sudo k3s kubectl apply -f app2-deployment.yaml
 sudo k3s kubectl apply -f app3-deployment.yaml
