@@ -7,7 +7,7 @@ This section involves deploying three simple web applications on the K3s cluster
 1. K3s cluster set up from Part 1.
 2. Choose three web applications for deployment.
 
-## Steps:
+## Steps
 
 ### 1. Configure K3s Cluster
 Ensure that the K3s cluster set up in Part 1 is running and accessible. Verify the status of the nodes and pods on both machines.
