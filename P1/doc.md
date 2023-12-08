@@ -79,7 +79,7 @@ sudo k3s kubectl get pods --all-namespaces
 sudo k3s kubectl get pods --all-namespaces
 ```
 
-Both machines should show the expected Kubernetes pods
+Both machines should show the expected Kubernetes pods.
 
 ## Conclusion
 Part 1 is complete when you have successfully set up a K3s cluster using Vagrant with two machines: one in controller mode and one in agent mode.
