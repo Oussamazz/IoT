@@ -5,7 +5,7 @@ echo "127.0.1.1 $(hostname)" >> /etc/hosts
 
 echo "Installing k3s..."
 export INSTALL_K3S_VERSION=v1.21.4+k3s1
-export INSTALL_K3S_EXEC="server --write-kubeconfig-mode 644 --node-ip=192.168.42.110"
+export INSTALL_K3S_EXEC="server --write-kubeconfig-mode 644 --node-ip=192.168.56.110"
 curl -sfL https://get.k3s.io | sh -
 
 echo "alias k='kubectl'" >> /home/vagrant/.bashrc
