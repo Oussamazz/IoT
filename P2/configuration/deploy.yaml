@@ -97,7 +97,7 @@ metadata:
   name: app-one
 spec:
   selector:
-    app: app-one
+   
   ports:
     - protocol: TCP
       port: 80
