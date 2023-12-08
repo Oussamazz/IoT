@@ -20,4 +20,5 @@ mv /tmp/app3 /home/vagrant
 /usr/local/bin/kubectl create configmap app-two-html --from-file /home/vagrant/app2/index.html
 /usr/local/bin/kubectl create configmap app-three-html --from-file /home/vagrant/app3/index.html
 
+sleep 5
 /usr/local/bin/kubectl apply -f /home/vagrant/deploy.yaml
