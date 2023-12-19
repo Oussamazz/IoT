@@ -1,0 +1,39 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: argocd-iot-app
+spec:
+  project: development
+  source:
+    repoURL: https://github.com/Oussamazz/dev_ns.git
+    targetRevision: HEAD
+    path: manifests
+    directory:
+      recurse: true
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: dev
+  syncPolicy:
+    automated:
+      prune: false
+      selfHeal: true
+---
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: development
+  labels:
+    app: argocd-iot
+spec:
+  # Project description
+  description: Our ArgoCD Project to deploy our app locally
+  # Allow manifests to deploy only from ilkou git repositories
+  sourceRepos:
+    - "https://github.com/oussamazz/*"
+  # Only permit to deploy applications in the same cluster
+  destinations:
+    - namespace: dev
+      server: https://kubernetes.default.svc
+  # Enables namespace orphaned resource monitoring.
+  orphanedResources:
+    warn: false
