@@ -4,6 +4,8 @@
 
 This project focuses on implementing Kubernetes (K8s) using K3s and K3d in a virtualized environment. Divided into parts, it covers VM setup, K3s configuration, application deployment, and more.
 
+![Wallpaper](wallpaper.jpg)
+
 ## Parts
 
 1. **Part 1: K3s and Vagrant**
