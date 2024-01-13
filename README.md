@@ -16,13 +16,13 @@ This project focuses on implementing Kubernetes (K8s) using K3s and K3d in a vir
    - Deploy three web apps on a single VM with K3s.
    - Access apps based on specified hosts and IP addresses.
 
-3. **Part 3: K3d and Argo CD** (working on it ...)
+3. **Part 3: K3d and Argo CD** (Done but still some work needed...)
    - Install K3D, Docker.
    - Set up namespaces for Argo CD.
    - Create a CI pipeline for app deployment from GitHub.
 
-## Bonus (working on it ...)
+## Bonus 
 
-- **Bonus Part (Optional):**
+- **Bonus Part (Optional):** (Done but still some work needed...)
    - Add GitLab to the project.
    - Ensure compatibility with the local cluster.
