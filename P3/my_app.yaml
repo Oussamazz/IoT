@@ -37,3 +37,4 @@ spec:
   # Enables namespace orphaned resource monitoring.
   orphanedResources:
     warn: false
+
