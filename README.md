@@ -8,11 +8,11 @@ This project focuses on implementing Kubernetes (K8s) using K3s and K3d in a vir
 
 ## Parts
 
-1. **Part 1: K3s and Vagrant**
+1. **Part 1: K3s and Vagrant** Done
    - Set up two VMs with Vagrant.
    - Install K3s in controller and agent modes.
 
-2. **Part 2: K3s and Three Simple Applications** (working on it ...)
+2. **Part 2: K3s and Three Simple Applications** Done
    - Deploy three web apps on a single VM with K3s.
    - Access apps based on specified hosts and IP addresses.
 
