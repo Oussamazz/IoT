@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: argocd-iot-app
-spec:
+spec: 
   project: development
   source:
     repoURL: https://github.com/Oussamazz/dev_ns.git
@@ -16,7 +16,7 @@ spec:
   syncPolicy:
     automated:
       prune: false
-      selfHeal: true
+      selfHeal: true 
 ---
 apiVersion: argoproj.io/v1alpha1
 kind: AppProject
@@ -24,8 +24,8 @@ metadata:
   name: development
   labels:
     app: argocd-iot
-spec:
-  # Project description
+spec: 
+  # Project description 
   description: Our ArgoCD Project to deploy our app locally
   # Allow manifests to deploy only from ilkou git repositories
   sourceRepos:

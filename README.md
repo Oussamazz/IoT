@@ -25,4 +25,4 @@ This project focuses on implementing Kubernetes (K8s) using K3s and K3d in a vir
 
 - **Bonus Part (Optional):** (Done but still some work needed...)
    - Add GitLab to the project.
-   - Ensure compatibility with the local cluster. 
+   - Ensure compatibility with the local cluster.
