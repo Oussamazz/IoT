@@ -8,7 +8,7 @@ K3s and K3d are both tools related to Kubernetes, but they serve different purpo
      - Simplified Installation: Easy installation process, making it suitable for edge devices, Raspberry Pi, and other lightweight environments.
      - Fully Compliant: Aims to be fully compliant with the Kubernetes API and is a Certified Kubernetes distribution.
 
-2. **K3d:**
+2. **K3d:**  
    - **Purpose:** K3d, short for "K3s in Docker," is a tool that allows you to run K3s (or multiple instances of K3s) inside Docker containers. It's primarily used for development and testing purposes, providing an easy way to spin up lightweight, isolated Kubernetes clusters on your local machine.
    - **Key Features:**
      - Lightweight Clusters: Enables the creation of lightweight, isolated Kubernetes clusters using Docker containers.
